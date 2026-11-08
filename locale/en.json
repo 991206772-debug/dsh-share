@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Share Conversation",
+    "description": "Turns the current conversation into one shareable page: overview, thread, conclusion, open items, tools and files, with a LAN link a colleague can actually open or a self-contained HTML/Markdown file to send."
+  }
+}

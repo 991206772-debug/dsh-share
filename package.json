@@ -1,0 +1,52 @@
+{
+  "name": "@local/dsh-share",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Turns the current conversation into a shareable analysis: overview, prompts, conclusion, todos, tools, files, plus one read-only link for other people.",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "author": "991206772-debug",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/991206772-debug/dsh-share.git"
+  },
+  "homepage": "https://github.com/991206772-debug/dsh-share#readme",
+  "bugs": {
+    "url": "https://github.com/991206772-debug/dsh-share/issues"
+  },
+  "engines": {
+    "node": ">=22.3.0"
+  },
+  "keywords": [
+    "dsh-plugin"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js"
+  }
+}
